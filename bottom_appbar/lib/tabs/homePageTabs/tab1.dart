@@ -1,6 +1,8 @@
+import 'package:bottom_appbar/tabs/homePageTabs/tab1Widgets/data_filter.dart';
 import 'package:bottom_appbar/tabs/homePageTabs/tab1Widgets/table.dart';
-import 'package:bottom_appbar/tabs/homePageTabs/tab1Widgets/table_row.dart';
 import 'package:flutter/material.dart';
+
+
 
 class Tab1 extends StatelessWidget {
   @override
@@ -16,7 +18,7 @@ class Tab1 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          
+          DataFilter(),
           Padding(
             padding: const EdgeInsets.only(
               top: 10.0,

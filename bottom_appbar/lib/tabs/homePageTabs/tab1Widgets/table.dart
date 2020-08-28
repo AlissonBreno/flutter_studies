@@ -58,7 +58,7 @@ class ReportTable extends StatelessWidget {
               );
             },
           ),
-          ),
+        ),
       ]),
     );
   }
