@@ -28,14 +28,13 @@ class _MenuBottomBarState extends State<MenuBottomBar> {
       body: tabs[_currentIndex],
       bottomNavigationBar: Container(
         child: Row(
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             MaterialButton(
               height: MediaQuery.of(context).size.height / 15,
               minWidth: MediaQuery.of(context).size.width / 2,
               color: !_isActive ? Colors.deepPurple[50] : Colors.deepPurple,
               child: Text(
-                'Vendas', 
+                'Home', 
                 style: TextStyle(
                   fontSize: 20.0,
                   color: !_isActive ? Colors.deepPurple : Colors.deepPurple[50],
@@ -53,7 +52,7 @@ class _MenuBottomBarState extends State<MenuBottomBar> {
               minWidth: MediaQuery.of(context).size.width / 2,
               color: _isActive ? Colors.deepPurple[50] : Colors.deepPurple,
               child: Text(
-                'Pagamentos', 
+                'Search', 
                 style: TextStyle(
                   fontSize: 20.0,
                   color: _isActive ? Colors.deepPurple : Colors.deepPurple[50],
@@ -70,29 +69,6 @@ class _MenuBottomBarState extends State<MenuBottomBar> {
         ),
         
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   type: BottomNavigationBarType.shifting,
-      //   fixedColor: Colors.green,
-      //   currentIndex: _currentIndex,
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       backgroundColor: Colors.deepPurple,
-      //       icon: Icon(Icons.home),
-      //       title: Text('Home'),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       backgroundColor: Colors.greenAccent,
-      //       icon: Icon(Icons.search),
-      //       title: Text('Search'),
-      //     ),
-
-      //   ],
-      //   onTap: (index) {
-      //     setState(() {
-      //       _currentIndex = index;
-      //     });
-      //   },
-      // ),
     );
   }
 }

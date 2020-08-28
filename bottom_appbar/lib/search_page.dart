@@ -1,3 +1,5 @@
+import 'package:bottom_appbar/tabs/searchPageTabs/tab3.dart';
+import 'package:bottom_appbar/tabs/searchPageTabs/tab4.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatefulWidget {
@@ -55,8 +57,8 @@ class _SearchPageState extends State<SearchPage>
       body: TabBarView(
         controller: _tabController,
         children: <Widget>[
-          Center(child: Text('Tab 3')),
-          Center(child: Text('Tab 4')),
+          Tab3(),
+          Tab4(),
         ],
       ),
     );

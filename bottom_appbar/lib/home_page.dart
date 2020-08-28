@@ -1,3 +1,5 @@
+import 'package:bottom_appbar/tabs/homePageTabs/tab1.dart';
+import 'package:bottom_appbar/tabs/homePageTabs/tab2.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -55,8 +57,8 @@ class _HomePageState extends State<HomePage>
       body: TabBarView(
         controller: _tabController,
         children: <Widget>[
-          Center(child: Text('Tab 1')),
-          Center(child: Text('Tab 2')),
+          Tab1(),
+          Tab2(),
         ],
       ),
     );
