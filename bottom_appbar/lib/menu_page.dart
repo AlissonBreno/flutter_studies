@@ -30,8 +30,8 @@ class _MenuBottomBarState extends State<MenuBottomBar> {
         child: Row(
           children: <Widget>[
             MaterialButton(
-              height: MediaQuery.of(context).size.height / 15,
-              minWidth: MediaQuery.of(context).size.width / 2,
+              height: MediaQuery.of(context).size.height / 15.0,
+              minWidth: MediaQuery.of(context).size.width / 2.0,
               color: !_isActive ? Colors.deepPurple[50] : Colors.deepPurple,
               child: Text(
                 'Home', 
@@ -48,8 +48,8 @@ class _MenuBottomBarState extends State<MenuBottomBar> {
               },
             ),
             MaterialButton(
-              height: MediaQuery.of(context).size.height / 15,
-              minWidth: MediaQuery.of(context).size.width / 2,
+              height: MediaQuery.of(context).size.height / 15.0,
+              minWidth: MediaQuery.of(context).size.width / 2.0,
               color: _isActive ? Colors.deepPurple[50] : Colors.deepPurple,
               child: Text(
                 'Search', 
