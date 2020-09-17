@@ -2,15 +2,22 @@ import 'package:bottom_appbar/tabs/homePageTabs/tab1.dart';
 import 'package:bottom_appbar/tabs/homePageTabs/tab2.dart';
 import 'package:flutter/material.dart';
 
+import 'constants/size_config.dart';
+
 class HomePage extends StatefulWidget {
+  final appBarHeight;
+
+  const HomePage({
+    Key key,
+    @required this.appBarHeight,
+  }) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
-
 }
 
-class _HomePageState extends State<HomePage> 
-  with SingleTickerProviderStateMixin {
-
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
   TabController _tabController;
 
   @override
@@ -24,12 +31,12 @@ class _HomePageState extends State<HomePage>
     _tabController.dispose();
     super.dispose();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: MediaQuery.of(context).size.height / 17.5,
+        toolbarHeight: widget.appBarHeight,
         bottom: TabBar(
           controller: _tabController,
           labelColor: Colors.deepPurple,
@@ -37,7 +44,10 @@ class _HomePageState extends State<HomePage>
           indicator: BoxDecoration(
             color: Colors.deepPurple[50],
             border: Border(
-              bottom: BorderSide(color: Colors.deepPurple[200], width: 3.0,),
+              bottom: BorderSide(
+                color: Colors.deepPurple[200],
+                width: 0.3 * SizeConfig.heightMultiplier,
+              ),
             ),
           ),
           tabs: <Widget>[
@@ -46,7 +56,7 @@ class _HomePageState extends State<HomePage>
                 child: Text(
                   'Tab 1',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 3.0 * SizeConfig.heightMultiplier,
                   ),
                 ),
               ),
@@ -56,7 +66,7 @@ class _HomePageState extends State<HomePage>
                 child: Text(
                   'Tab 2',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 3.0 * SizeConfig.heightMultiplier,
                   ),
                 ),
               ),

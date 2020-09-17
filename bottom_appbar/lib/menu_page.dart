@@ -2,6 +2,7 @@ import 'package:bottom_appbar/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import 'constants/size_config.dart';
 import 'home_page.dart';
 
 class MenuBottomBar extends StatefulWidget {
@@ -10,21 +11,32 @@ class MenuBottomBar extends StatefulWidget {
 }
 
 class _MenuBottomBarState extends State<MenuBottomBar> {
-
   int _currentIndex = 0;
   bool _isActive = false;
 
-  final tabs = <Widget>[
-    HomePage(),
-    SearchPage()    
-  ];
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('BottomMenuTest'),
+    AppBar appbar = AppBar(
+      title: Text(
+        'BottomMenuTest',
+        style: TextStyle(
+          fontSize: 2.0 * SizeConfig.heightMultiplier,
+        ),
       ),
+      elevation: 0.0,
+    );
+
+    final tabs = <Widget>[
+      HomePage(
+        appBarHeight: appbar.preferredSize.height,
+      ),
+      SearchPage(
+        appBarHeight: appbar.preferredSize.height,
+      ),
+    ];
+
+    return Scaffold(
+      appBar: appbar,
       body: tabs[_currentIndex],
       bottomNavigationBar: Container(
         child: Row(
@@ -34,13 +46,13 @@ class _MenuBottomBarState extends State<MenuBottomBar> {
               minWidth: MediaQuery.of(context).size.width / 2.0,
               color: !_isActive ? Colors.deepPurple[50] : Colors.deepPurple,
               child: Text(
-                'Home', 
+                'Home',
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 2.5 * SizeConfig.heightMultiplier,
                   color: !_isActive ? Colors.deepPurple : Colors.deepPurple[50],
                 ),
               ),
-              onPressed: (){
+              onPressed: () {
                 setState(() {
                   _currentIndex = 0;
                   _isActive = false;
@@ -52,13 +64,13 @@ class _MenuBottomBarState extends State<MenuBottomBar> {
               minWidth: MediaQuery.of(context).size.width / 2.0,
               color: _isActive ? Colors.deepPurple[50] : Colors.deepPurple,
               child: Text(
-                'Search', 
+                'Search',
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 2.5 * SizeConfig.heightMultiplier,
                   color: _isActive ? Colors.deepPurple : Colors.deepPurple[50],
                 ),
               ),
-              onPressed: (){
+              onPressed: () {
                 setState(() {
                   _currentIndex = 1;
                   _isActive = true;
@@ -67,7 +79,6 @@ class _MenuBottomBarState extends State<MenuBottomBar> {
             ),
           ],
         ),
-        
       ),
     );
   }

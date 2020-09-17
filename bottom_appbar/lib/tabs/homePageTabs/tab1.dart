@@ -1,18 +1,17 @@
+import 'package:bottom_appbar/constants/size_config.dart';
 import 'package:bottom_appbar/tabs/homePageTabs/tab1Widgets/data_filter.dart';
 import 'package:bottom_appbar/tabs/homePageTabs/tab1Widgets/table.dart';
 import 'package:flutter/material.dart';
-
-
 
 class Tab1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(
-        top: 30.0,
-        bottom: 10.0,
-        left: 20.0,
-        right: 20.0,
+        top: 4.0 * SizeConfig.heightMultiplier,
+        bottom: 4.0 * SizeConfig.heightMultiplier,
+        left: 4.0 * SizeConfig.heightMultiplier,
+        right: 4.0 * SizeConfig.heightMultiplier,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -20,9 +19,8 @@ class Tab1 extends StatelessWidget {
         children: <Widget>[
           DataFilter(),
           Padding(
-            padding: const EdgeInsets.only(
-              top: 10.0,
-              bottom: 15.0,
+            padding: EdgeInsets.only(
+              top: 2.0 * SizeConfig.heightMultiplier,
             ),
             child: ReportTable(
               title: 'Débito',
@@ -35,8 +33,8 @@ class Tab1 extends StatelessWidget {
   }
 }
 
-List <Map<String, dynamic>> fakeList = [
-  {'avatar': 'assets/icons/mastercard.svg', 'valor': 134.00}, 
-  {'avatar': 'assets/icons/mastercard.svg', 'valor': 124.00},
-  {'avatar': 'assets/icons/mastercard.svg', 'valor': 134.00}
+List<Map<String, dynamic>> fakeList = [
+  {'avatar': 'assets/icons/mastercard.svg', 'valor': 134.05},
+  {'avatar': 'assets/icons/mastercard.svg', 'valor': 124.05},
+  {'avatar': 'assets/icons/mastercard.svg', 'valor': 134.05}
 ];
