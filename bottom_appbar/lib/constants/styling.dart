@@ -24,7 +24,6 @@ class AppTheme {
     button: _buttonLight,
     headline4: _greetingLight,
     headline3: _searchLight,
-    bodyText2: _selectedTabLight,
     bodyText1: _unSelectedTabLight,
   );
 
@@ -52,12 +51,6 @@ class AppTheme {
   static final TextStyle _searchLight = TextStyle(
     color: Colors.deepPurple,
     fontSize: 2.3 * SizeConfig.textMultiplier,
-  );
-
-  static final TextStyle _selectedTabLight = TextStyle(
-    color: Colors.deepPurple,
-    fontWeight: FontWeight.bold,
-    fontSize: 2 * SizeConfig.textMultiplier,
   );
 
   static final TextStyle _unSelectedTabLight = TextStyle(
