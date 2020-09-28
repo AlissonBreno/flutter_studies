@@ -62,7 +62,7 @@ class _DataFilterState extends State<DataFilter> {
             Text(
               '$startDate - $endDate',
               style: TextStyle(
-                fontSize: 2.6 * SizeConfig.heightMultiplier,
+                fontSize: 2.3 * SizeConfig.heightMultiplier,
                 fontWeight: FontWeight.w300,
               ),
             ),

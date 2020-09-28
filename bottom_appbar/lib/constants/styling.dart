@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class AppTheme {
   AppTheme._();
 
-  static const Color appBackgroundColor = Color(0xFFFFF7EC);
+  static const Color appBackgroundColor = Color(0xFFF5F5F5);
   static const Color topBarBackgroundColor = Colors.deepPurple;
   static const Color selectedTabBackgroundColor = Colors.deepPurple;
   static const Color unSelectedTabBackgroundColor = Color(0xFFEDE7F6);

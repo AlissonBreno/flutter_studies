@@ -10,8 +10,8 @@ class Tab1 extends StatelessWidget {
       padding: EdgeInsets.only(
         top: 4.0 * SizeConfig.heightMultiplier,
         bottom: 4.0 * SizeConfig.heightMultiplier,
-        left: 4.0 * SizeConfig.heightMultiplier,
-        right: 4.0 * SizeConfig.heightMultiplier,
+        left: 2.0 * SizeConfig.heightMultiplier,
+        right: 2.0 * SizeConfig.heightMultiplier,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
